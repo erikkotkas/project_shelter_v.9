@@ -103,20 +103,26 @@
 <script>
   
   //video start/gif
-  
+
   const introVideo = document.getElementById("introVideo");
   const loopGif = document.getElementById("loopGif");
 
-  introVideo.addEventListener("ended", () => {
+  loopGif.style.display = "none";
+
+  const returning = sessionStorage.getItem("returning") === "true";
+  const firstVisit = localStorage.getItem("firstVisit");
+  const recentVisit = firstVisit && (Date.now() - parseInt(firstVisit, 10)) < 900000;
+
+  if (returning || recentVisit) {
     introVideo.style.display = "none";
     loopGif.style.display = "block";
-  });
-  
-  const video = document.getElementById("introVideo");
-
-  video.addEventListener("ended", () => {
-    video.style.display = "none";
-  });
+  } else {
+    localStorage.setItem("firstVisit", Date.now());
+    introVideo.addEventListener("ended", () => {
+      introVideo.style.display = "none";
+      loopGif.style.display = "block";
+    });
+  }
 
 
   
@@ -160,6 +166,7 @@
 
   function fadeToPage(url) {
     sessionStorage.setItem("scrollY", window.scrollY);
+    sessionStorage.setItem("returning", "true");
     sessionStorage.setItem("fade-transition", "true");
 
     fade.style.transition = "";
@@ -372,8 +379,10 @@
 
   const savedY = sessionStorage.getItem("scrollY");
   if (savedY !== null) {
-    window.scrollTo(0, parseInt(savedY, 10));
     sessionStorage.removeItem("scrollY");
+    window.addEventListener("load", function () {
+      window.scrollTo(0, parseInt(savedY, 10));
+    });
   }
 })();
 
