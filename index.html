@@ -159,6 +159,7 @@
   });
 
   function fadeToPage(url) {
+    sessionStorage.setItem("scrollY", window.scrollY);
     sessionStorage.setItem("fade-transition", "true");
 
     fade.style.transition = "";
@@ -367,6 +368,12 @@
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
+  }
+
+  const savedY = sessionStorage.getItem("scrollY");
+  if (savedY !== null) {
+    window.scrollTo(0, parseInt(savedY, 10));
+    sessionStorage.removeItem("scrollY");
   }
 })();
 
