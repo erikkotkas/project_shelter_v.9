@@ -84,6 +84,10 @@
 
   function back() { fadeToPage("index.html"); }
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') fadeToPage('index.html');
+  });
+
   (function () {
     'use strict';
 

@@ -88,6 +88,10 @@
 
   function back() { fadeToPage("index.html"); }
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') fadeToPage('index.html');
+  });
+
   let currentUrl = '#';
   function openContext(data) {
     document.getElementById('ctx-title').textContent = data.name;

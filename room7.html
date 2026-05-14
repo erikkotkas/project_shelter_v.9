@@ -95,6 +95,10 @@
     fadeToPage("index.html");
   }
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') fadeToPage('index.html');
+  });
+
   function changeRoom1() {
     fadeToPage("room1.html");
   }
