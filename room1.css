@@ -160,14 +160,14 @@ padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 8px;
 padding-right: 8px;
-border-radius: 2px;
-font-size: 18px;
+border-radius: 0;
+font-size: 14px;
 bottom: 105%;
 opacity: 0;
 transition: opacity 0.15s;
 pointer-events: none;
 white-space: nowrap;
-font-family: roboto, arial;
+font-family: "lores-12", monospace;
 }
 
 .b1-container:hover .tool-tip,
@@ -181,7 +181,7 @@ font-family: roboto, arial;
     left: 2%;
     top: calc(50px + 12px);
     font-family: "lores-12", monospace;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: normal;
     background-color: #000;
     color: #fff;
