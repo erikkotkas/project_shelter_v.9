@@ -259,6 +259,7 @@ padding: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
+  background-color: #9F7045;
   background-image: url('images/ground_tile.svg');
   background-repeat: repeat;
   background-size: 144px;
