@@ -12,7 +12,7 @@
 
   <header class="header">
     <div class="left-section">
-      <img class="logo" src="images/nuclear-logo.svg" alt="SHELTER" onclick="fadeToPage('mockup.html')" style="cursor:pointer;">
+      <img class="logo" src="images/nuclear-logo.svg" alt="SHELTER" onclick="fadeToPage('index.html')" style="cursor:pointer;">
     </div>
     <div class="right-section">
       <button class="btn map-button" type="button" aria-label="Open map">
@@ -82,7 +82,7 @@
     setTimeout(() => { window.location.href = url; }, 500);
   }
 
-  function back() { fadeToPage("mockup.html"); }
+  function back() { fadeToPage("index.html"); }
 
   (function () {
     'use strict';
@@ -189,7 +189,7 @@
         el.addEventListener('click', function () { selectRoom(parseInt(el.dataset.room, 10)); });
       });
 
-      document.querySelector('.menu-home').addEventListener('click', function () { goToPage('mockup.html'); });
+      document.querySelector('.menu-home').addEventListener('click', function () { goToPage('index.html'); });
       document.getElementById('menu-enter').addEventListener('click', function () {
         var room = getRoom(selectedRoom);
         if (room && room.href) goToPage(room.href);
