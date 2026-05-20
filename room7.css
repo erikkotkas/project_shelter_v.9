@@ -1,0 +1,12 @@
+@import url('rooms-base.css');
+
+.b1-container { display: block; background-color: transparent; border: none; position: absolute; top: 53%; left: 15%; height: 33%; width: 16%; }
+.b1 { height: 100%; width: 100%; background: none; border: none; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; }
+.sofa { display: block; position: absolute; height: 100%; width: auto; pointer-events: none; }
+.shelf { display: block; position: absolute; height: 15%; width: auto; top: 24%; left: 21%; }
+.b2-container { display: block; background-color: transparent; border: none; position: absolute; top: 61%; left: 36%; height: 24%; width: 16%; }
+.b2 { height: 100%; width: 100%; background: none; border: none; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; }
+.table { display: block; position: absolute; height: 100%; width: auto; pointer-events: none; }
+.b3-container { display: block; background-color: transparent; border: none; position: absolute; top: 46%; left: 55%; height: 35%; width: 16%; }
+.b3 { height: 100%; width: 100%; background: none; border: none; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer; }
+.shelf-button { display: block; position: absolute; height: 100%; width: auto; pointer-events: none; }
