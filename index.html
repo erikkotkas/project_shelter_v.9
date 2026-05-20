@@ -29,10 +29,10 @@
 
     <video id="introVideo" id="introVideo"class="intro-video" autoplay muted  width:100vw; >
   <source  class="video" none;
- src="videos/intro_vid_new.webm" type="video/webm">
+ src="videos/intro_new.webm" type="video/webm">
 </video>
 <video id="loopGif" class="loop-gif" autoplay muted loop playsinline>
-  <source src="videos/loop_vid_new.webm" type="video/webm">
+  <source src="videos/loop_new.webm" type="video/webm">
 </video>
 </div>
   
@@ -101,7 +101,7 @@
 
   const returning = sessionStorage.getItem("returning") === "true";
   const firstVisit = localStorage.getItem("firstVisit");
-  const recentVisit = firstVisit && (Date.now() - parseInt(firstVisit, 10)) < 900000;
+  const recentVisit = firstVisit && (Date.now() - parseInt(firstVisit, 10)) < 0;
 
   if (returning || recentVisit) {
     introVideo.style.display = "none";
