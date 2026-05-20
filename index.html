@@ -8,6 +8,22 @@
 <link rel="stylesheet" href="header.css">
 <link rel="stylesheet" href="https://use.typekit.net/bao6qio.css">
    <title> mockup </title>
+<style>
+.room-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "lores-12", monospace;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  pointer-events: all;
+  z-index: 10;
+  cursor: default;
+}
+</style>
 
 <header class="header">
   <div class="left-section">
@@ -87,11 +103,25 @@
 
 </div>
 
+
+<!-- DEMO MODE overlays — set DEMO_MODE = true in script to enable -->
+<div id="overlay-room7"  class="room-overlay" style="display:none;top:54.26%;left:11.51%;width:25.24%;height:5.81%;">COMING SOON</div>
+<div id="overlay-room8"  class="room-overlay" style="display:none;top:64.22%;left:60.01%;width:25.24%;height:5.81%;">COMING SOON</div>
+<div id="overlay-room9"  class="room-overlay" style="display:none;top:78.05%;left:11.51%;width:25.24%;height:5.81%;">COMING SOON</div>
+<div id="overlay-room10" class="room-overlay" style="display:none;top:91.59%;left:60.01%;width:25.24%;height:5.81%;">COMING SOON</div>
 </div>
 <div class="ground"></div>
 </div>
 <script>
-  
+  const DEMO_MODE = true;
+
+  if (DEMO_MODE) {
+    ['overlay-room7','overlay-room8','overlay-room9','overlay-room10'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'flex';
+    });
+  }
+
   //video start/gif
 
   const introVideo = document.getElementById("introVideo");
